@@ -5,7 +5,7 @@ import pers.lzw.ecache.redis.builder.BaseJedisPoolManager;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.JedisSentinelPool;
-import redis.clients.util.Pool;
+import redis.clients.jedis.util.Pool;;
 
 import java.util.Set;
 

@@ -2,7 +2,7 @@ package pers.lzw.ecache.redis.builder;
 
 import pers.lzw.ecache.config.ConfigTemplate;
 import redis.clients.jedis.Jedis;
-import redis.clients.util.Pool;
+import redis.clients.jedis.util.Pool;;
 
 /**
  * @program jedis链接创建

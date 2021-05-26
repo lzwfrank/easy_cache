@@ -4,7 +4,7 @@ import pers.lzw.ecache.redis.builder.JedisConf;
 import pers.lzw.ecache.redis.builder.RedisClientBuilder;
 import pers.lzw.ecache.redis.source.jedis.AbstractJedisSource;
 import redis.clients.jedis.Jedis;
-import redis.clients.util.Pool;
+import redis.clients.jedis.util.Pool;;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

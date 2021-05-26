@@ -2,7 +2,7 @@ package pers.lzw.ecache.redis.builder;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPoolConfig;
-import redis.clients.util.Pool;
+import redis.clients.jedis.util.Pool;;
 
 import java.util.Arrays;
 import java.util.HashSet;

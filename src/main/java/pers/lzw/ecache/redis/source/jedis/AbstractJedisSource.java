@@ -3,6 +3,7 @@ package pers.lzw.ecache.redis.source.jedis;
 import com.google.common.base.Defaults;
 import pers.lzw.ecache.redis.source.RedisSource;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.params.SetParams;
 
 import java.util.Map;
 import java.util.Set;
@@ -193,7 +194,8 @@ public abstract class AbstractJedisSource implements RedisSource {
         checkNotNull(value);
         try (Jedis jedis = this.getResource();){
             jedis.select(index);
-            result= jedis.set(key, value,"nx", "ex", seconds);
+
+            result= jedis.set(key, value,SetParams.setParams().nx().ex(seconds));
         }
         return result != null && "OK".equals(result);
     }

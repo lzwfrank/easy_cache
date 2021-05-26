@@ -4,7 +4,7 @@ package pers.lzw.ecache.redis.builder;
 import pers.lzw.ecache.redis.builder.impl.JedisPoolManager;
 import pers.lzw.ecache.redis.builder.impl.JedisSentinelManager;
 import redis.clients.jedis.Jedis;
-import redis.clients.util.Pool;
+import redis.clients.jedis.util.Pool;;
 
 /**
  * @description:redis相关连接生成者
@@ -18,7 +18,7 @@ public class RedisClientBuilder {
      * @Author: liuzhengwei
      * @Date: 2020-10-10 10:33
      * @Param: [jedisConf]
-     * @Return: redis.clients.util.Pool<redis.clients.jedis.Jedis>
+     * @Return: redis.clients.jedis.util.Pool;<redis.clients.jedis.Jedis>
      */
     public static Pool<Jedis> jedisPoolBuild(JedisConf jedisConf) {
         JedisManager jedisManager = jedisConf.isSentinel()?new JedisSentinelManager(): new JedisPoolManager();
@@ -30,7 +30,7 @@ public class RedisClientBuilder {
      * @Author: liuzhengwei
      * @Date: 2020-10-10 10:34
      * @Param: []
-     * @Return: redis.clients.util.Pool<redis.clients.jedis.Jedis>
+     * @Return: redis.clients.jedis.util.Pool;<redis.clients.jedis.Jedis>
      */
     public static Pool<Jedis> jedisPoolBuild() {
         //判断是否有配置spring.redis.master,若其值不为空，则认为是哨兵模式
